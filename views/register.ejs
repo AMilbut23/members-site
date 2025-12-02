@@ -1,0 +1,16 @@
+<%- include("layout", { body: `
+  <h1>Register</h1>
+  ${error ? `<p class="error">${error}</p>` : ""}
+
+  <form method="post" action="/register">
+    <div>
+      <label>Username:</label><br>
+      <input type="text" name="username" required />
+    </div>
+    <div>
+      <label>Password:</label><br>
+      <input type="password" name="password" required />
+    </div>
+    <button type="submit">Create Account</button>
+  </form>
+` }) %>
